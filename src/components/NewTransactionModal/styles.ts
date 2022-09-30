@@ -9,6 +9,7 @@ export const Container = styled.form`
     }
     input {
         width: 100%;
+        margin-top: 1rem;
         padding: 0 1.5rem;
         height: 4rem;
         border-radius: 0.25rem;
@@ -17,9 +18,14 @@ export const Container = styled.form`
         font-weight: 400;
         font-size: 1rem;
     }
-
-    & + input {
-        margin-top: 1rem;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"]{
+        -moz-appearance: textfield;
+        appearance: textfield;
     }
 
     &::placeholder {
